@@ -1,0 +1,6 @@
+*
+!.gitignore
+!index.php
+!mu-plugins
+!plugins
+!themes

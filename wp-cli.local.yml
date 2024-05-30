@@ -1,0 +1,4 @@
+# Global parameter defaults
+path: public/wp
+url: http://litepress.test
+user: admin
