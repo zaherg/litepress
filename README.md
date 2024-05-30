@@ -14,6 +14,15 @@ composer create-project zaherg/litepress litepress
 
 ### Login information
 
-**Username**: admin
+- **Username**: admin
+- **Password**: password
 
-**Password**: password
+### Reinstall
+
+If you decided that you want to reset your project and start with a fresh wordpress installation, you can run
+
+```bash
+./install.sh
+```
+
+check the code to know what the command do.

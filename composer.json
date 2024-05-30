@@ -2,6 +2,7 @@
     "name": "zaherg/litepress",
     "type": "project",
     "license": "MIT",
+    "description": "A wordpress scaffolding with sqlite out of the box using composer.",
     "require": {
         "johnpbloch/wordpress-core": "^6.5",
         "johnpbloch/wordpress-core-installer": "*",

@@ -14,3 +14,6 @@ wp plugin install query-monitor disable-updates --activate
 
 # echo "- Activate extendify"
 # wp plugin activate extendify
+
+echo "- Delete old files"
+rm -fr ./public/content/{uploads,upgrade,upgrade-temp-backup,debug.log}
