@@ -15,4 +15,5 @@ composer create-project zaherg/litepress litepress
 ### Login information
 
 **Username**: admin
+
 **Password**: password
