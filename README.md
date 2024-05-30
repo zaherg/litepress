@@ -1,4 +1,4 @@
-# Lite Press
+# LitePress
 
 This is a personal project which will setup wordpress using composer and will install sqlite integration plugin automatically.
 
