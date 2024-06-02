@@ -1,11 +1,11 @@
 {
     "name": "zaherg/litepress",
-    "type": "project",
-    "license": "MIT",
     "description": "A wordpress scaffolding with sqlite out of the box using composer.",
+    "license": "MIT",
+    "type": "project",
     "require": {
-        "johnpbloch/wordpress-core": "^6.5",
-        "johnpbloch/wordpress-core-installer": "*",
+        "roots/wordpress-core-installer": "dev-master",
+        "roots/wordpress-full": "^6.5",
         "vlucas/phpdotenv": "*",
         "wp-cli/wp-cli-bundle": "*",
         "wpackagist-plugin/sqlite-database-integration": "^2.1.11",
@@ -35,18 +35,27 @@
             ]
         },
         "wordpress-install-dir": {
-            "johnpbloch/wordpress-core": "public/wp"
+            "roots/wordpress-full": "public/wp"
         }
     },
     "scripts": {
+        "post-update-cmd": [
+            "@php composer run install:clear"
+        ],
+        "post-root-package-install": [
+            "@php composer run install:clear"
+        ],
         "post-create-project-cmd": [
-            "@php composer run install:prepare",
+            "@php composer run install:clear",
+            "@php composer run install:env",
+            "@php composer run install:db",
             "@php composer run install:core",
             "@php composer run install:theme"
         ],
+        "install:clear": "@php -r \"is_dir('public/wp/wp-content') && system('rm -fr public/wp/wp-content');\"",
         "install:core": "./vendor/bin/wp core install --admin_user=admin --admin_password=password --admin_email=admin@example.com --skip-email --url=http://litepress.test --title=WordPress",
-        "install:prepare": [
-            "@php -r \"file_exists('public/content/db.php') || copy('public/content/plugins/sqlite-database-integration/db.copy','public/content/db.php');\"",
+        "install:db": "@php -r \"file_exists('public/content/db.php') || copy('public/content/plugins/sqlite-database-integration/db.copy','public/content/db.php');\"",
+        "install:env": [
             "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
         "install:theme": "./vendor/bin/wp theme activate extendable"
