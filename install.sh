@@ -18,8 +18,5 @@ wp theme install extendable --activate
 echo "- Install and activate query-monitor & disable-updates"
 wp plugin install query-monitor disable-updates --activate
 
-# echo "- Activate extendify"
-# wp plugin activate extendify
-
 echo "- Delete old files"
 rm -fr ./public/content/{uploads,upgrade,upgrade-temp-backup,debug.log}
