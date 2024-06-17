@@ -84,16 +84,16 @@
         },
         {
             "name": "composer/class-map-generator",
-            "version": "1.3.2",
+            "version": "1.3.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/class-map-generator.git",
-                "reference": "acd227952154850d0bb7d65caa4f9edf9cd806a7"
+                "reference": "b1b3fd0b4eaf3ddf3ee230bc340bf3fff454a1a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/acd227952154850d0bb7d65caa4f9edf9cd806a7",
-                "reference": "acd227952154850d0bb7d65caa4f9edf9cd806a7",
+                "url": "https://api.github.com/repos/composer/class-map-generator/zipball/b1b3fd0b4eaf3ddf3ee230bc340bf3fff454a1a3",
+                "reference": "b1b3fd0b4eaf3ddf3ee230bc340bf3fff454a1a3",
                 "shasum": ""
             },
             "require": {
@@ -137,7 +137,7 @@
             ],
             "support": {
                 "issues": "https://github.com/composer/class-map-generator/issues",
-                "source": "https://github.com/composer/class-map-generator/tree/1.3.2"
+                "source": "https://github.com/composer/class-map-generator/tree/1.3.4"
             },
             "funding": [
                 {
@@ -153,28 +153,28 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-31T19:45:56+00:00"
+            "time": "2024-06-12T14:13:04+00:00"
         },
         {
             "name": "composer/composer",
-            "version": "2.7.6",
+            "version": "2.7.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "fabd995783b633829fd4280e272284b39b6ae702"
+                "reference": "291942978f39435cf904d33739f98d7d4eca7b23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/fabd995783b633829fd4280e272284b39b6ae702",
-                "reference": "fabd995783b633829fd4280e272284b39b6ae702",
+                "url": "https://api.github.com/repos/composer/composer/zipball/291942978f39435cf904d33739f98d7d4eca7b23",
+                "reference": "291942978f39435cf904d33739f98d7d4eca7b23",
                 "shasum": ""
             },
             "require": {
                 "composer/ca-bundle": "^1.0",
-                "composer/class-map-generator": "^1.0",
+                "composer/class-map-generator": "^1.3.3",
                 "composer/metadata-minifier": "^1.0",
                 "composer/pcre": "^2.1 || ^3.1",
-                "composer/semver": "^3.2.5",
+                "composer/semver": "^3.3",
                 "composer/spdx-licenses": "^1.5.7",
                 "composer/xdebug-handler": "^2.0.2 || ^3.0.3",
                 "justinrainbow/json-schema": "^5.2.11",
@@ -193,11 +193,11 @@
                 "symfony/process": "^5.4 || ^6.0 || ^7"
             },
             "require-dev": {
-                "phpstan/phpstan": "^1.9.3",
-                "phpstan/phpstan-deprecation-rules": "^1",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1",
-                "phpstan/phpstan-symfony": "^1.2.10",
+                "phpstan/phpstan": "^1.11.0",
+                "phpstan/phpstan-deprecation-rules": "^1.2.0",
+                "phpstan/phpstan-phpunit": "^1.4.0",
+                "phpstan/phpstan-strict-rules": "^1.6.0",
+                "phpstan/phpstan-symfony": "^1.4.0",
                 "symfony/phpunit-bridge": "^6.4.1 || ^7.0.1"
             },
             "suggest": {
@@ -251,7 +251,7 @@
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
                 "security": "https://github.com/composer/composer/security/policy",
-                "source": "https://github.com/composer/composer/tree/2.7.6"
+                "source": "https://github.com/composer/composer/tree/2.7.7"
             },
             "funding": [
                 {
@@ -267,7 +267,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2024-05-04T21:03:15+00:00"
+            "time": "2024-06-10T20:11:12+00:00"
         },
         {
             "name": "composer/installers",
@@ -5159,16 +5159,16 @@
     "packages-dev": [
         {
             "name": "ergebnis/composer-normalize",
-            "version": "2.42.0",
+            "version": "2.43.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/composer-normalize.git",
-                "reference": "02cf2b69ad2a74c6f11a8c3f5f054b8f949df910"
+                "reference": "4b46330c84bb8f43fac79f5c5a05162fc7c80d75"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/02cf2b69ad2a74c6f11a8c3f5f054b8f949df910",
-                "reference": "02cf2b69ad2a74c6f11a8c3f5f054b8f949df910",
+                "url": "https://api.github.com/repos/ergebnis/composer-normalize/zipball/4b46330c84bb8f43fac79f5c5a05162fc7c80d75",
+                "reference": "4b46330c84bb8f43fac79f5c5a05162fc7c80d75",
                 "shasum": ""
             },
             "require": {
@@ -5182,17 +5182,17 @@
                 "php": "~7.4.0 || ~8.0.0 || ~8.1.0 || ~8.2.0 || ~8.3.0"
             },
             "require-dev": {
-                "composer/composer": "^2.6.6",
+                "composer/composer": "^2.7.7",
                 "ergebnis/license": "^2.4.0",
-                "ergebnis/php-cs-fixer-config": "^6.20.0",
-                "ergebnis/phpunit-slow-test-detector": "^2.9.0",
+                "ergebnis/php-cs-fixer-config": "^6.30.1",
+                "ergebnis/phpunit-slow-test-detector": "^2.14.0",
                 "fakerphp/faker": "^1.23.1",
                 "infection/infection": "~0.26.6",
-                "phpunit/phpunit": "^9.6.16",
-                "psalm/plugin-phpunit": "~0.18.4",
-                "rector/rector": "~0.19.2",
-                "symfony/filesystem": "^5.4.25",
-                "vimeo/psalm": "^5.20.0"
+                "phpunit/phpunit": "^9.6.19",
+                "psalm/plugin-phpunit": "~0.19.0",
+                "rector/rector": "^1.1.0",
+                "symfony/filesystem": "^5.4.40",
+                "vimeo/psalm": "^5.24.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -5232,7 +5232,7 @@
                 "security": "https://github.com/ergebnis/composer-normalize/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/composer-normalize"
             },
-            "time": "2024-01-30T11:54:02+00:00"
+            "time": "2024-06-16T13:22:18+00:00"
         },
         {
             "name": "ergebnis/json",
