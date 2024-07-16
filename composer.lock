@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5696ff07f61b0e70e4f6c146cb4f765f",
+    "content-hash": "e3050a2ad204f6cdb3d97f939c764d98",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -1587,22 +1587,22 @@
         },
         {
             "name": "roots/wordpress-full",
-            "version": "6.5.5",
+            "version": "6.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WordPress/WordPress.git",
-                "reference": "6.5.5"
+                "reference": "6.6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://downloads.wordpress.org/release/wordpress-6.5.5.zip",
-                "shasum": "49b76b2b475658b95f022fa5bec6518a5053f9ee"
+                "url": "https://downloads.wordpress.org/release/wordpress-6.6.zip",
+                "shasum": "4db7f3f95508fdb5b75c6985869efb0e53ed42a1"
             },
             "require": {
                 "php": ">= 7.0.0"
             },
             "provide": {
-                "wordpress/core-implementation": "6.5.5"
+                "wordpress/core-implementation": "6.6"
             },
             "suggest": {
                 "ext-curl": "Performs remote request operations.",
@@ -1653,7 +1653,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2024-06-24T19:14:46+00:00"
+            "time": "2024-07-16T16:26:33+00:00"
         },
         {
             "name": "seld/jsonlint",

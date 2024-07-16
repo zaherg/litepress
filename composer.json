@@ -5,7 +5,7 @@
     "type": "project",
     "require": {
         "roots/wordpress-core-installer": "dev-master",
-        "roots/wordpress-full": "^6.5",
+        "roots/wordpress-full": "^6.6",
         "vlucas/phpdotenv": "*",
         "wp-cli/wp-cli-bundle": "*",
         "wpackagist-plugin/sqlite-database-integration": "^2.1.11",
