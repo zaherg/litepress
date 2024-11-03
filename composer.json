@@ -46,7 +46,8 @@
             "@php composer run install:clear"
         ],
         "post-create-project-cmd": [
-            "@php composer run install:clear",
+            "@php composer install",
+	    "@php composer run install:clear",
             "@php composer run install:env",
             "@php composer run install:db",
             "@php composer run install:core",
