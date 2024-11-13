@@ -5,7 +5,7 @@
     "type": "project",
     "require": {
         "roots/wordpress-core-installer": "dev-master",
-        "roots/wordpress-full": "^6.6",
+        "roots/wordpress-full": "^6.7",
         "vlucas/phpdotenv": "*",
         "wp-cli/wp-cli-bundle": "*",
         "wpackagist-plugin/sqlite-database-integration": "^2.1.11",
@@ -47,12 +47,14 @@
         ],
         "post-create-project-cmd": [
             "@php composer install",
-	    "@php composer run install:clear",
+	        "@php composer run install:clear",
             "@php composer run install:env",
             "@php composer run install:db",
+            "@php composer run install:db-update",
             "@php composer run install:core",
             "@php composer run install:theme"
         ],
+        "install:db-update": "@php -r \"system('sqlite3 ./public/content/database/.ht.sqlite \"PRAGMA journal_mode=WAL;\"');\"",
         "install:clear": "@php -r \"is_dir('public/wp/wp-content') && system('rm -fr public/wp/wp-content');\"",
         "install:core": "./vendor/bin/wp core install --admin_user=admin --admin_password=password --admin_email=admin@example.com --skip-email --url=http://litepress.test --title=WordPress",
         "install:db": "@php -r \"file_exists('public/content/db.php') || copy('public/content/plugins/sqlite-database-integration/db.copy','public/content/db.php');\"",
