@@ -16,8 +16,46 @@ define('SECURE_AUTH_SALT', $_ENV['SECURE_AUTH_SALT']);
 define('LOGGED_IN_SALT', $_ENV['LOGGED_IN_SALT']);
 define('NONCE_SALT', $_ENV['NONCE_SALT']);
 
-// Database
+/**
+-- Set the journal mode to Write-Ahead Logging for concurrency
+PRAGMA journal_mode = WAL;
+
+-- Set synchronous mode to NORMAL for performance and data safety balance
+PRAGMA synchronous = NORMAL;
+
+-- Set busy timeout to 5 seconds to avoid "database is locked" errors
+PRAGMA busy_timeout = 5000;
+
+-- Set cache size to 20MB for faster data access
+PRAGMA cache_size = -20000;
+
+-- Enable foreign key constraint enforcement
+PRAGMA foreign_keys = ON;
+
+-- Enable auto vacuuming and set it to incremental mode for gradual space reclaiming
+PRAGMA auto_vacuum = INCREMENTAL;
+
+-- Store temporary tables and data in memory for better performance
+PRAGMA temp_store = MEMORY;
+
+-- Set the mmap_size to 2GB for faster read/write access using memory-mapped I/O
+PRAGMA mmap_size = 2147483648;
+
+-- Set the page size to 8KB for balanced memory usage and performance
+PRAGMA page_size = 8192;
+ */
+
+// SQLite PRAGMA Settings
 define('SQLITE_JOURNAL_MODE', $_ENV['SQLITE_JOURNAL_MODE'] ?? 'WAL');
+define('SQLITE_SYNCHRONOUS', 'NORMAL');
+define('SQLITE_BUSY_TIMEOUT', 5000);
+define('SQLITE_CACHE_SIZE', -20000);
+define('SQLITE_FOREIGN_KEYS', 'ON');
+define('SQLITE_AUTO_VACUUM', 'INCREMENTAL');
+define('SQLITE_TEMP_STORE', 'MEMORY');
+define('SQLITE_MMAP_SIZE', 2147483648);
+define('SQLITE_PAGE_SIZE', 8192);
+
 
 // Development
 define('SAVEQUERIES', $_ENV['APP_ENV'] !== 'production');
