@@ -23,6 +23,11 @@ function get_sqlite_constant($name, $default) {
  * Initialize SQLite optimizations
  */
 function optimize_sqlite_database() {
+    // Check if optimization has already run
+    if (get_option('sqlite_optimizer_initialized')) {
+        return;
+    }
+
     global $wpdb;
 
     // Only proceed if we're using SQLite
@@ -129,6 +134,9 @@ function optimize_sqlite_database() {
                 }
             }
         }
+
+        // Mark optimization as complete
+        update_option('sqlite_optimizer_initialized', true);
 
     } catch (Exception $e) {
         if (defined('WP_DEBUG') && WP_DEBUG) {
