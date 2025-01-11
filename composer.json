@@ -8,7 +8,7 @@
         "roots/wordpress-full": "^6.7",
         "vlucas/phpdotenv": "*",
         "wp-cli/wp-cli-bundle": "*",
-        "wpackagist-plugin/sqlite-database-integration": "^2.1.11",
+        "wpackagist-plugin/sqlite-database-integration": "^2.1.16",
         "wpackagist-theme/extendable": "^2.0.9"
     },
     "require-dev": {
@@ -40,18 +40,17 @@
     },
     "scripts": {
         "post-update-cmd": [
-            "@php composer run install:clear"
+            "@install:clear"
         ],
         "post-root-package-install": [
-            "@php composer run install:clear"
+            "@install:clear"
         ],
         "post-create-project-cmd": [
-            "@php composer install",
-	        "@php composer run install:clear",
-            "@php composer run install:env",
-            "@php composer run install:db",
-            "@php composer run install:core",
-            "@php composer run install:theme"
+	        "@install:clear",
+            "@install:env",
+            "@install:db",
+            "@install:core",
+            "@install:theme"
         ],
         "install:clear": "@php -r \"is_dir('public/wp/wp-content') && system('rm -fr public/wp/wp-content');\"",
         "install:core": "./vendor/bin/wp core install --admin_user=admin --admin_password=password --admin_email=admin@example.com --skip-email --url=http://litepress.test --title=WordPress",
