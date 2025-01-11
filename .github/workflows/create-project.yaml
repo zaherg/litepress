@@ -3,6 +3,9 @@ name: Test create project
 on:
   workflow_dispatch:
 
+env:
+  WP_CLI_ALLOW_ROOT: 1
+
 jobs:
     create-project:
         name: Create a new project
@@ -15,15 +18,24 @@ jobs:
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '8.1'
+                  php-version: '8.3'
                   tools: composer, wp-cli
+
+            - name: Validate composer.json
+              run: composer validate
 
             - name: run composer
               run: composer create-project zaherg/litepress litepress
 
+            - name: Verify WordPress installation
+              run: |
+                cd litepress
+                vendor/bin/wp core is-installed
+
     reinstall-project:
         name: Reinstall project
         runs-on: ubuntu-latest
+        needs: [create-project]
 
         steps:
             - name: Check out source code
@@ -32,11 +44,16 @@ jobs:
             - name: Setup PHP
               uses: shivammathur/setup-php@v2
               with:
-                  php-version: '8.1'
+                  php-version: '8.3'
                   tools: composer, wp-cli
+
+            - name: Validate composer.json
+              run: composer validate
 
             - name: run composer
               run: composer create-project zaherg/litepress litepress
 
             - name: run reinstall
-              run: ./reinstall.sh
+              run: |
+                cd litepress
+                ./reinstall.sh

@@ -4,6 +4,7 @@
     "license": "MIT",
     "type": "project",
     "require": {
+        "php": ">=8.3",
         "roots/wordpress-core-installer": "dev-master",
         "roots/wordpress-full": "^6.7",
         "vlucas/phpdotenv": "*",
