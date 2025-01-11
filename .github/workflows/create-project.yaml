@@ -1,0 +1,42 @@
+name: Release
+
+on:
+  workflow_dispatch:
+
+jobs:
+    create-project:
+        name: Create a new project
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out source code
+              uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.0'
+                  tools: composer, wp-cli
+
+            - name: run composer
+              run: composer create-project zaherg/litepress litepress
+
+    reinstall-project:
+        name: Reinstall project
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Check out source code
+              uses: actions/checkout@v4
+
+            - name: Setup PHP
+              uses: shivammathur/setup-php@v2
+              with:
+                  php-version: '8.0'
+                  tools: composer, wp-cli
+
+            - name: run composer
+              run: composer create-project zaherg/litepress litepress
+
+            - name: run reinstall
+              run: ./reinstall.sh
