@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "95953893b8aaeaa0d8077b2759186206",
+    "content-hash": "34402ccf398747254dfdedf56e6760a2",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -5246,11 +5246,17 @@
         },
         {
             "name": "zaherg/litepress-composer-commands",
-            "version": "dev-main",
+            "version": "0.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zaherg/litepress-commands.git",
+                "reference": "7a979d4ec2ee778bb82ca14d4b7809f669ec2903"
+            },
             "dist": {
-                "type": "path",
-                "url": "packages/composer-commands",
-                "reference": "dc57f7621ec2edc39dcc0fa63138f5f7f817cfff"
+                "type": "zip",
+                "url": "https://api.github.com/repos/zaherg/litepress-commands/zipball/7a979d4ec2ee778bb82ca14d4b7809f669ec2903",
+                "reference": "7a979d4ec2ee778bb82ca14d4b7809f669ec2903",
+                "shasum": ""
             },
             "require": {
                 "composer/composer": "^2.0",
@@ -5265,13 +5271,16 @@
                     "Composer\\Litepress\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
             "description": "Composer commands for Litepress project setup and management",
-            "transport-options": {
-                "relative": true
-            }
+            "support": {
+                "issues": "https://github.com/zaherg/litepress-commands/issues",
+                "source": "https://github.com/zaherg/litepress-commands/tree/0.0.1"
+            },
+            "time": "2025-01-12T08:57:28+00:00"
         }
     ],
     "packages-dev": [
