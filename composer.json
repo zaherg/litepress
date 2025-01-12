@@ -3,8 +3,11 @@
     "description": "A wordpress scaffolding with sqlite out of the box using composer.",
     "license": "MIT",
     "type": "project",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
     "require": {
         "php": ">=8.3",
+        "zaherg/litepress-composer-commands": "^0.0.1",
         "roots/wordpress-core-installer": "dev-master",
         "roots/wordpress-full": "^6.7",
         "vlucas/phpdotenv": "*",
@@ -28,6 +31,9 @@
     },
     "extra": {
         "installer-paths": {
+            "public/content/mu-plugins/{$name}/": [
+                "type:wordpress-muplugin"
+            ],
             "public/content/plugins/{$name}/": [
                 "type:wordpress-plugin"
             ],
@@ -40,25 +46,17 @@
         }
     },
     "scripts": {
-        "post-update-cmd": [
-            "@install:clear"
-        ],
-        "post-root-package-install": [
-            "@install:clear"
+        "post-autoload-dump": [
+            "Composer\\Litepress\\ScriptHandler::handleCleanup"
         ],
         "post-create-project-cmd": [
-	        "@install:clear",
-            "@install:env",
-            "@install:db",
-            "@install:core",
-            "@install:theme"
+            "Composer\\Litepress\\ScriptHandler::handleCreateProject",
+            "Composer\\Litepress\\ScriptHandler::handleCleanup",
+            "Composer\\Litepress\\ScriptHandler::handleDatabase",
+            "Composer\\Litepress\\ScriptHandler::handleWordPressInstallation",
+            "Composer\\Litepress\\ScriptHandler::handleThemeInstallation",
+            "Composer\\Litepress\\ScriptHandler::handleGeneratingWPCliConfigFile"
         ],
-        "install:clear": "@php -r \"is_dir('public/wp/wp-content') && system('rm -fr public/wp/wp-content');\"",
-        "install:core": "./vendor/bin/wp core install --admin_user=admin --admin_password=password --admin_email=admin@example.com --skip-email --url=http://litepress.test --title=WordPress",
-        "install:db": "@php -r \"file_exists('public/content/db.php') || copy('public/content/plugins/sqlite-database-integration/db.copy','public/content/db.php');\"",
-        "install:env": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "install:theme": "./vendor/bin/wp theme activate extendable"
+        "re-install": "Composer\\Litepress\\ScriptHandler::handleReinstall"
     }
 }

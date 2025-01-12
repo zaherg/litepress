@@ -54,6 +54,4 @@ jobs:
               run: composer create-project zaherg/litepress litepress
 
             - name: run reinstall
-              run: |
-                cd litepress
-                ./reinstall.sh
+              run: composer run re-install

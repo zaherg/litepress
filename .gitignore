@@ -3,12 +3,17 @@
 
 /node_modules
 /vendor
+/packages
 
 .env
 
 # misc
 .DS_Store
 *.pem
+packages.json
+install.sh
+wp-cli.local.yml
+wp-cli.*.yml
 
 # debug
 npm-debug.log*
