@@ -1,8 +1,8 @@
 # LitePress
 
-This is a personal project which will setup WordPress using composer and will install sqlite integration plugin automatically.
+This is a personal project that will set up WordPress using composer and will install sqlite integration plugin automatically.
 
-The `mu-plugins` folder contains some plugins I copied from a WordPress project created by **Wordpress Studio**.
+The `mu-plugins` folder contains some plugins I copied from a WordPress project created by **WordPress Studio**.
 
 ## Creating a Project
 
@@ -39,9 +39,9 @@ After installation is complete, you can login to your WordPress dashboard using 
 
 ## Running with Docker
 
-The project includes Docker support for easy development. To run the project using Docker:
+The project includes Docker support to facilitate easy development. To run the project using Docker:
 
-1. Make sure you have Docker and Docker Compose installed on your system.
+1. Make sure you have Docker and Docker Compose installed on your system and the project is installed using one of the above installation steps.
 
 2. (Optional) Configure the environment variables in `.env`:
    ```env
@@ -49,12 +49,12 @@ The project includes Docker support for easy development. To run the project usi
    REDIS_PORT=6379     # Change if port 6379 is already in use
    ```
 
-4. Start the Docker containers:
+3. Start the Docker containers:
    ```bash
    docker-compose up -d
    ```
 
-5. Your application will be available at `http://127.0.0.1` (or the port you specified in NGINX_PORT).
+4. Your application will be available at `http://127.0.0.1` (or the port you specified in NGINX_PORT).
 
 The Docker setup includes:
 - PHP-FPM with Nginx
