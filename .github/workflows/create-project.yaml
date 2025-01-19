@@ -54,4 +54,4 @@ jobs:
               run: composer create-project zaherg/litepress litepress
 
             - name: run reinstall
-              run: composer run re-install
+              run: ADMIN_PASSWORD=test composer run re-install
