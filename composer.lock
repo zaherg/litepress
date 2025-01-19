@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "28d367b5989130931b32835850c343cd",
+    "content-hash": "d30231a088585ed9a98113f68cec8b83",
     "packages": [
         {
             "name": "clue/ndjson-react",
@@ -6376,16 +6376,16 @@
         },
         {
             "name": "zaherg/litepress-composer-commands",
-            "version": "0.0.2",
+            "version": "0.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/zaherg/litepress-commands.git",
-                "reference": "a641f9609a9d2c2271ce7c7fbc4d8e7786df54c3"
+                "reference": "84f6a72a29111b703d60be79d4ea13fcec07db03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zaherg/litepress-commands/zipball/a641f9609a9d2c2271ce7c7fbc4d8e7786df54c3",
-                "reference": "a641f9609a9d2c2271ce7c7fbc4d8e7786df54c3",
+                "url": "https://api.github.com/repos/zaherg/litepress-commands/zipball/84f6a72a29111b703d60be79d4ea13fcec07db03",
+                "reference": "84f6a72a29111b703d60be79d4ea13fcec07db03",
                 "shasum": ""
             },
             "require": {
@@ -6410,9 +6410,9 @@
             "description": "Composer commands for Litepress project setup and management",
             "support": {
                 "issues": "https://github.com/zaherg/litepress-commands/issues",
-                "source": "https://github.com/zaherg/litepress-commands/tree/0.0.2"
+                "source": "https://github.com/zaherg/litepress-commands/tree/0.0.3"
             },
-            "time": "2025-01-18T19:21:37+00:00"
+            "time": "2025-01-19T07:29:17+00:00"
         }
     ],
     "packages-dev": [
