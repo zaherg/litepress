@@ -2,6 +2,8 @@ name: Test create project
 
 on:
   workflow_dispatch:
+  push:
+  pull_request:
 
 env:
   WP_CLI_ALLOW_ROOT: 1
@@ -9,7 +11,7 @@ env:
 jobs:
     create-project:
         name: Create a new project
-        runs-on: ubuntu-latest
+        runs-on: ubuntu-24.04
 
         steps:
             - name: Check out source code
@@ -54,6 +56,9 @@ jobs:
               run: composer create-project zaherg/litepress litepress
 
             - name: run reinstall
+              run: ADMIN_PASSWORD=test composer run re-install
+
+            - name: Verify WordPress installation
               run: |
                 cd litepress
-                ./reinstall.sh
+                vendor/bin/wp core is-installed
