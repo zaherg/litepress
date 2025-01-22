@@ -1,0 +1,6 @@
+[template]
+src = "nginx.conf.tmpl"
+dest = "/etc/nginx/sites-available/default"
+keys = [
+    "NGINX_PORT"
+]
