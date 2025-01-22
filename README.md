@@ -16,6 +16,13 @@ Run the command:
 composer create-project zaherg/litepress litepress
 ```
 
+> [!TIP]
+> To get the development code you can run
+> ```bash
+> composer create-project zaherg/litepress litepress -s dev
+> ```
+
+
 This will create a new project with default settings:
 - Username: admin
 - Password: password
