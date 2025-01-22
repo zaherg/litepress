@@ -2,7 +2,7 @@
 set -e
 
 # Run confd
-confd -onetime -backend env
+/usr/local/bin/confd -onetime -backend env
 
 # Execute CMD
 exec "$@"
