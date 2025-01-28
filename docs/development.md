@@ -10,9 +10,10 @@ nav_order: 3
 
 LitePress follows modern WordPress development practices:
 
-- `wp-content/` - Themes and plugins
-- `mu-plugins/` - Must-use plugins
-- `wp/` - WordPress core (managed by Composer)
+- `public/content/plugins` - Plugins
+- `public/content/themes` - Themes
+- `public/content/mu-plugins/` - Must-use plugins
+- `public/wp/` - WordPress core (managed by Composer)
 
 ## Local Development
 
