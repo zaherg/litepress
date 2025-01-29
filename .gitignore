@@ -6,6 +6,7 @@
 /packages
 
 .env
+.continuerules
 
 # misc
 .DS_Store

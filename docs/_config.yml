@@ -1,0 +1,21 @@
+remote_theme: just-the-docs/just-the-docs
+title: LitePress
+description: A modern WordPress development environment with SQLite integration
+color_scheme: dark
+
+# Enable search
+search_enabled: false
+
+# Aux links for the upper right navigation
+aux_links:
+  "LitePress on GitHub":
+    - "https://github.com/zaherg/litepress"
+
+# Makes Aux links open in a new tab
+aux_links_new_tab: true
+
+# Sort pages by title
+nav_sort: case_sensitive
+
+# Footer content
+footer_content: "Copyright &copy; 2025 Zaher Ghaibeh. Distributed under an MIT license."
