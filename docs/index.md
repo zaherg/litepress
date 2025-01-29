@@ -10,13 +10,17 @@ Welcome to LitePress - a modern WordPress development environment that uses Comp
 
 ## Quick Start
 
-### Simple Setup
+### Interactive Setup
+
+You can run the following command and answer the interactive questions.
 
 ```bash
 composer create-project zaherg/litepress litepress
 ```
 
-### Advanced Setup
+### Automated Setup
+
+Or you can have the environment variables presented before the command to be used automatically.
 
 ```bash
 ADMIN_USER="your-username" \
@@ -27,7 +31,4 @@ SITE_TITLE="Your Site Title" \
 composer create-project zaherg/litepress litepress
 ```
 
-## Default Credentials
-When using simple setup:
-- Username: `admin`
-- Password: `password`
+This is the preferred way for automations.
