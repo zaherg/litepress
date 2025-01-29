@@ -32,3 +32,12 @@ composer create-project zaherg/litepress litepress
 ```
 
 This is the preferred way for automations.
+
+
+## Reinstallation
+
+To reset your project:
+
+```bash
+ADMIN_PASSWORD="your-password" composer run re-install
+`
