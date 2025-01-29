@@ -4,7 +4,7 @@ description: A modern WordPress development environment with SQLite integration
 color_scheme: dark
 
 # Enable search
-search_enabled: true
+search_enabled: false
 
 # Aux links for the upper right navigation
 aux_links:
