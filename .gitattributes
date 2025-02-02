@@ -40,7 +40,6 @@ yarn.lock -diff
 # Exclude these files from the git archive export (.zip)
 .env export-ignore
 .gitattributes export-ignore
-.gitignore export-ignore
 packages.json export-ignore
 /.github export-ignore
 /docs export-ignore
