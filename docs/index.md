@@ -40,4 +40,4 @@ To reset your project:
 
 ```bash
 ADMIN_PASSWORD="your-password" composer run re-install
-`
+```
