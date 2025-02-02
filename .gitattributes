@@ -43,3 +43,4 @@ yarn.lock -diff
 .gitignore export-ignore
 packages.json export-ignore
 /.github export-ignore
+/docs export-ignore
