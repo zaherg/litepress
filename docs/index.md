@@ -28,7 +28,7 @@ ADMIN_PASSWORD="your-password" \
 ADMIN_EMAIL="admin@example.com" \
 WP_HOME="http://your-site-url.test" \
 SITE_TITLE="Your Site Title" \
-composer create-project zaherg/litepress litepress
+composer create-project zaherg/litepress litepress --no-interaction
 ```
 
 This is the preferred way for automations.

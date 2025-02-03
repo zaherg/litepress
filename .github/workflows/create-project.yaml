@@ -33,7 +33,7 @@ jobs:
                 ADMIN_EMAIL="admin@example.com" \
                 WP_HOME="http://your-site-url.test" \
                 SITE_TITLE="Your Site Title" \
-                composer create-project zaherg/litepress litepress
+                composer create-project zaherg/litepress litepress --no-interaction
 
             - name: Verify WordPress installation
               run: |
@@ -65,7 +65,7 @@ jobs:
                 ADMIN_EMAIL="admin@example.com" \
                 WP_HOME="http://your-site-url.test" \
                 SITE_TITLE="Your Site Title" \
-                composer create-project zaherg/litepress litepress
+                composer create-project zaherg/litepress litepress --no-interaction
 
             - name: run reinstall
               run: ADMIN_PASSWORD=password composer run re-install
