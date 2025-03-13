@@ -1,3 +1,7 @@
+> [!WARNING]
+> This is not maintain any more, the amount of plugins that are not compatible with it is not small, if you want something similar but with mysql I advice you to check [Bedrock](https://roots.io/bedrock/ ) project
+
+
 # LitePress
 
 This is a personal project that will set up WordPress using composer and will install sqlite integration plugin automatically.
